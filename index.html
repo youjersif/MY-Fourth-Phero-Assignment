@@ -57,17 +57,19 @@
         </div>
         <!-- The buttons who will do everything -->
         <div class="mb-6 mt-3 flex gap-3 w-full">
-            <button onclick="switchTab('all')" class="  px-5 py-2 border border-indigo-100 rounded-md font-[12px] w-[100px]"
-                id="tab-all">All</button>
-            <button onclick="switchTab('interview')" class=" px-5 py-2  border border-indigo-100 rounded-md font-[12px] w-[100px]"
+            <button onclick="switchTab('all')"
+                class="  px-5 py-2 border border-indigo-100 rounded-md font-[12px] w-[100px]" id="tab-all">All</button>
+            <button onclick="switchTab('interview')"
+                class=" px-5 py-2  border border-indigo-100 rounded-md font-[12px] w-[100px]"
                 id="tab-interview">Interview</button>
-            <button onclick="switchTab('rejected')" class=" px-5 py-2 border border-indigo-100 rounded-md font-[12px] w-[100px]"
+            <button onclick="switchTab('rejected')"
+                class=" px-5 py-2 border border-indigo-100 rounded-md font-[12px] w-[100px]"
                 id="tab-rejected">Rejected</button>
         </div>
         <!-- cardsSection -->
         <div id="all-cards" class="space-y-4">
             <!-- Card1 -->
-            <div class="space-y-6 p-3 border border-blue-100 rounded-md">
+            <div class="job-card space-y-6 p-3 border border-blue-100 rounded-md">
                 <div class="flex justify-between ">
                     <div class="space-y-2">
                         <h4 class="font-bold text-[#002C5C]">Mobile First Corp</h4>
@@ -85,15 +87,17 @@
                 </div>
                 <div class="btn bg-[#EEF4FF]"><button>NOT APPLIED</button></div>
                 <div>
-                    <p class="text-[#64748B] text-[13px]">Build cross-platform mobile applications using React Native. Work on products used by millions of
+                    <p class="text-[#64748B] text-[13px]">Build cross-platform mobile applications using React Native.
+                        Work on products used by millions of
                         users worldwide.</p>
                 </div>
-                <div class="space-x-3"><button class="btn text-green-500 border-green-500">INTERVIEW</button>
-                    <button class="btn text-red-600 border-red-500">REJECTED</button>
+                <div onclick="moveToInterview(this)" id="interview-container" class="space-x-3"><button
+                        class="btn text-green-500 border-green-500">INTERVIEW</button>
+                    <button onclick="moveToRejected(this)" id="rejected-container" class="btn text-red-600 border-red-500">REJECTED</button>
                 </div>
             </div>
             <!-- Card2 -->
-            <div class="space-y-6 p-3 border border-blue-100 rounded-md">
+            <div class="job-card space-y-6 p-3 border border-blue-100 rounded-md">
                 <div class="flex justify-between ">
                     <div class="space-y-2">
                         <h4 class="font-bold text-[#002C5C]">WebFlow Agency</h4>
@@ -111,15 +115,16 @@
                 </div>
                 <div class="btn bg-[#EEF4FF]"><button>NOT APPLIED</button></div>
                 <div>
-                    <p class="text-[#64748B] text-[13px]">Create stunning web experiences for high-profile clients. Must have portfolio and experience with
+                    <p class="text-[#64748B] text-[13px]">Create stunning web experiences for high-profile clients. Must
+                        have portfolio and experience with
                         modern web design trends.</p>
                 </div>
-                <div class="space-x-3"><button class="btn text-green-500 border-green-500">INTERVIEW</button>
-                    <button class="btn text-red-600 border-red-500">REJECTED</button>
+                <div onclick="moveToRejected(this)" class="space-x-3"><button class="btn text-green-500 border-green-500">INTERVIEW</button>
+                    <button onclick="moveToRejected(this)" class="btn text-red-600 border-red-500">REJECTED</button>
                 </div>
             </div>
             <!-- Card3 -->
-            <div class="space-y-6 p-3 border border-blue-100 rounded-md">
+            <div class="job-card space-y-6 p-3 border border-blue-100 rounded-md">
                 <div class="flex justify-between ">
                     <div class="space-y-2">
                         <h4 class="font-bold text-[#002C5C]">DataViz Solutions</h4>
@@ -137,16 +142,17 @@
                 </div>
                 <div class="btn bg-[#EEF4FF]"><button>NOT APPLIED</button></div>
                 <div>
-                    <p class="text-[#64748B] text-[13px]">Transform complex data into compelling visualizations. Required skills: D3.js, React, and strong
+                    <p class="text-[#64748B] text-[13px]">Transform complex data into compelling visualizations.
+                        Required skills: D3.js, React, and strong
                         analytical thinking.
                     </p>
                 </div>
-                <div class="space-x-3"><button class="btn text-green-500 border-green-500">INTERVIEW</button>
-                    <button class="btn text-red-600 border-red-500">REJECTED</button>
+                <div onclick="moveToInterview(this)" class="space-x-3"><button class="btn text-green-500 border-green-500">INTERVIEW</button>
+                    <button onclick="moveToRejected(this)" class="btn text-red-600 border-red-500">REJECTED</button>
                 </div>
             </div>
             <!-- Card4 -->
-            <div class="space-y-6 p-3 border border-blue-100 rounded-md">
+            <div class="job-card space-y-6 p-3 border border-blue-100 rounded-md">
                 <div class="flex justify-between ">
                     <div class="space-y-2">
                         <h4 class="font-bold text-[#002C5C]">CloudFirst Inc</h4>
@@ -168,15 +174,16 @@
                 </div>
                 <div class="btn bg-[#EEF4FF]"><button>NOT APPLIED</button></div>
                 <div>
-                    <p class="text-[#64748B] text-[13px]">Design and maintain scalable backend systems using Python and AWS. Work with modern DevOps
+                    <p class="text-[#64748B] text-[13px]">Design and maintain scalable backend systems using Python and
+                        AWS. Work with modern DevOps
                         practices and cloud infrastructure.</p>
                 </div>
-                <div class="space-x-3"><button class="btn text-green-500 border-green-500">INTERVIEW</button>
-                    <button class="btn text-red-600 border-red-500">REJECTED</button>
+                <div  onclick="moveToInterview(this)" class="space-x-3"><button class="btn text-green-500 border-green-500">INTERVIEW</button>
+                    <button  onclick="moveToRejected(this)" class="btn text-red-600 border-red-500">REJECTED</button>
                 </div>
             </div>
             <!-- Card5 -->
-            <div class="space-y-6 p-3 border border-blue-100 rounded-md">
+            <div class="job-card space-y-6 p-3 border border-blue-100 rounded-md">
                 <div class="flex justify-between ">
                     <div class="space-y-2">
                         <h4 class="font-bold text-[#002C5C]">Innovation Labs</h4>
@@ -194,15 +201,16 @@
                 </div>
                 <div class="btn bg-[#EEF4FF]"><button>NOT APPLIED</button></div>
                 <div>
-                    <p class="text-[#64748B] text-[13px]">Create beautiful and functional user interfaces for our suite of products. Strong design skills
+                    <p class="text-[#64748B] text-[13px]">Create beautiful and functional user interfaces for our suite
+                        of products. Strong design skills
                         and frontend development expertise required.</p>
                 </div>
-                <div class="space-x-3"><button class="btn text-green-500 border-green-500">INTERVIEW</button>
-                    <button class="btn text-red-600 border-red-500">REJECTED</button>
+                <div onclick="moveToInterview(this)" class="space-x-3"><button class="btn text-green-500 border-green-500">INTERVIEW</button>
+                    <button onclick="moveToRejected(this)" class="btn text-red-600 border-red-500">REJECTED</button>
                 </div>
             </div>
             <!-- Card6 -->
-            <div class="space-y-6 p-3 border border-blue-100 rounded-md">
+            <div class="job-card space-y-6 p-3 border border-blue-100 rounded-md">
                 <div class="flex justify-between ">
                     <div class="space-y-2">
                         <h4 class="font-bold text-[#002C5C]">MegaCorp Solutions</h4>
@@ -220,18 +228,19 @@
                 </div>
                 <div class="btn bg-[#EEF4FF]"><button>NOT APPLIED</button></div>
                 <div>
-                    <p class="text-[#64748B] text-[13px]">Build enterprise applications with JavaScript and modern frameworks. We offer competitive
+                    <p class="text-[#64748B] text-[13px]">Build enterprise applications with JavaScript and modern
+                        frameworks. We offer competitive
                         compensation, health insurance, and professional development opportunities.</p>
                 </div>
-                <div class="space-x-3"><button class="btn text-green-500 border-green-500">INTERVIEW</button>
-                    <button class="btn text-red-600 border-red-500">REJECTED</button>
+                <div onclick="moveToInterview(this)" class="space-x-3"><button class="btn text-green-500 border-green-500">INTERVIEW</button>
+                    <button onclick="moveToRejected(this)" class="btn text-red-600 border-red-500">REJECTED</button>
                 </div>
             </div>
             <!-- Card7 -->
-            <div class="space-y-6 p-3 border border-blue-100 rounded-md">
+            <div class="job-card space-y-6 p-3 border border-blue-100 rounded-md">
                 <div class="flex justify-between ">
                     <div class="space-y-2">
-                        <h4 class="font-bold text-[#002C5C]">MStartupXYZ
+                        <h4 class="font-bold text-[#002C5C]">MStartupXYZ</h4>
                         <p class="text-[#64748B]">Full Stack Engineer</p>
                     </div>
                     <div class="w-8 h-8 border border-[#F1F2F4] rounded-full flex items-center justify-center"><i
@@ -246,19 +255,20 @@
                 </div>
                 <div class="btn bg-[#EEF4FF]"><button>NOT APPLIED</button></div>
                 <div>
-                    <p class="text-[#64748B] text-[13px]">Join our fast-growing startup and work on our core platform. Experience with Node.js and React
+                    <p class="text-[#64748B] text-[13px]">Join our fast-growing startup and work on our core platform.
+                        Experience with Node.js and React
                         required. Great benefits and equity package included.</p>
                 </div>
-                <div class="space-x-3"><button class="btn text-green-500 border-green-500">INTERVIEW</button>
-                    <button class="btn text-red-600 border-red-500">REJECTED</button>
+                <div onclick="moveToInterview(this)" class="space-x-3"><button class="btn text-green-500 border-green-500">INTERVIEW</button>
+                    <button onclick="moveToRejected(this)" class="btn text-red-600 border-red-500">REJECTED</button>
                 </div>
             </div>
             <!-- Card8 -->
-            <div class="space-y-6 p-3 border border-blue-100 rounded-md">
+            <div class="job-card space-y-6 p-3 border border-blue-100 rounded-md">
                 <div class="flex justify-between ">
                     <div class="space-y-2">
-                        <h4 class="font-bold text-[#002C5C]">TechCorp Industries
-                            <p class="text-[#64748B]">Senior Frontend Developer</p>
+                        <h4 class="font-bold text-[#002C5C]">TechCorp Industries</h4>
+                        <p class="text-[#64748B]">Senior Frontend Developer</p>
                     </div>
                     <div class="w-8 h-8 border border-[#F1F2F4] rounded-full flex items-center justify-center"><i
                             class="fa-solid fa-trash-can"></i></div>
@@ -268,19 +278,17 @@
                         •
                         Full-time
                         •
-                        $1San Francisco, CA
-                        •
-                        Full-time
-                        •
-                        $130,000 - $175,00030,000 - $175,000</p>
+
+                        $130,000 - $175,000</p>
                 </div>
                 <div class="btn bg-[#EEF4FF]"><button>NOT APPLIED</button></div>
                 <div>
-                    <p class="text-[#64748B] text-[13px]">We are looking for an experienced Frontend Developer to build scalable web applications using
+                    <p class="text-[#64748B] text-[13px]">We are looking for an experienced Frontend Developer to build
+                        scalable web applications using
                         React and TypeScript. You will work with a talented team on cutting-edge projects.</p>
                 </div>
-                <div class="space-x-3"><button class="btn text-green-500 border-green-500">INTERVIEW</button>
-                    <button class="btn text-red-600 border-red-500">REJECTED</button>
+                <div onclick="moveToInterview(this)" class="space-x-3"><button class="btn text-green-500 border-green-500">INTERVIEW</button>
+                    <button onclick="moveToRejected(this)" class="btn text-red-600 border-red-500">REJECTED</button>
                 </div>
             </div>
 
@@ -288,8 +296,16 @@
         </div>
 
     </main>
+
+    <div id="interview-section" class="hidden">
+        <div id="interview-cards" class="space-y-4"></div>
+    </div>
+    <div id="rejected-section" class="hidden">
+        <div id="rejected-cards" class="space-y-4"></div>
+    </div>
     <!-- BlankPage Section -->
-    <section id="blankpage" class=" hidden w-full mx-auto justify-center items-center  border border-blue-100 rounded-md mt-5">
+    <section id="blankpage"
+        class=" hidden w-full mx-auto justify-center items-center  border border-blue-100 rounded-md mt-5">
         <div class="flex flex-col justify-center items-center text-center p-20">
             <div><img src="./jobs.png" alt=""></div>
             <div>
