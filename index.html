@@ -29,10 +29,10 @@
 
 </head>
 
-<body class="md:w-[95%] lg:w-[80%] mx-auto ">
+<body class="w-[95%] mx-auto sm: lg:w-[80%] mx-auto bg-slate-50  ">
     <header class="w-full mx-auto space-y-3 mt-4">
-        <h1 class="text-[32px] font-bold text-[#002C5C]">Job Application Tracker</h1>
-        <div class="grid grid-cols-3 gap-8">
+        <h1 class=" sm:text-[32px] font-bold text-[#002C5C]">Job Application Tracker</h1>
+        <div class="grid grid-cols-1 gap-1 w-[95%] mx-auto sm:grid grid-cols-3 lg:gap-8">
             <div class=" bg-[#F1F2F4] rounded-md p-4 space-y-2">
                 <p class="text-[#323B49] text-[14px] ">Total</p>
                 <p id="total" class="text-black-600 font-bold text-[18px] ">0</p>
@@ -57,13 +57,14 @@
         </div>
         <!-- The buttons who will do everything -->
         <div class="mb-6 mt-3 flex gap-3 w-full">
-            <button class="bg-blue-500 text-white px-5 py-2 rounded-md font-[12px] w-[100px]"
-                id="all-filter-btn">All</button>
-            <button class="bg-gray-300 px-5 py-2 text-[#64748B] rounded-md font-[12px] w-[100px]"
-                id="interview-filter-btn">Interview</button>
-            <button class="bg-gray-300 px-5 py-2 text-[#64748B] rounded-md font-[12px] w-[100px]"
-                id="rejected-filter-btn">Rejected</button>
+            <button onclick="switchTab('all')" class="  px-5 py-2 border border-indigo-100 rounded-md font-[12px] w-[100px]"
+                id="tab-all">All</button>
+            <button onclick="switchTab('interview')" class=" px-5 py-2  border border-indigo-100 rounded-md font-[12px] w-[100px]"
+                id="tab-interview">Interview</button>
+            <button onclick="switchTab('rejected')" class=" px-5 py-2 border border-indigo-100 rounded-md font-[12px] w-[100px]"
+                id="tab-rejected">Rejected</button>
         </div>
+        <!-- cardsSection -->
         <div id="all-cards" class="space-y-4">
             <!-- Card1 -->
             <div class="space-y-6 p-3 border border-blue-100 rounded-md">
@@ -287,7 +288,8 @@
         </div>
 
     </main>
-    <section id="blankpage" class="w-full mx-auto justify-center items-center  border border-blue-100 rounded-md mt-5">
+    <!-- BlankPage Section -->
+    <section id="blankpage" class=" hidden w-full mx-auto justify-center items-center  border border-blue-100 rounded-md mt-5">
         <div class="flex flex-col justify-center items-center text-center p-20">
             <div><img src="./jobs.png" alt=""></div>
             <div>
@@ -297,6 +299,8 @@
         </div>
 
     </section>
+    <script src="./script.js"></script>
 </body>
+
 
 </html>
