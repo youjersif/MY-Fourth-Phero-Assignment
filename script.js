@@ -107,6 +107,11 @@ function checkEmptyTabs() {
     }
 }
 
+document.querySelectorAll(".delete-btn").forEach(icon => {
+    icon.addEventListener("click", function () {
+        deleteCard(this);
+    });
+});
 
 
 switchTab(currentTab);
