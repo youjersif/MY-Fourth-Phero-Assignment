@@ -56,6 +56,58 @@ function moveToRejected(button) {
     filterCards(currentTab);
 }
 
+function deleteCard(button) {
+    const card = button.closest(".job-card");
+    card.dataset.status = "deleted";
+    card.remove(); 
+    updateCounts();
+    filterCards(currentTab);
+}
+
+
+function updateCounts() {
+    const cards = document.querySelectorAll(".job-card");
+    let total = 0, interview = 0, rejected = 0;
+
+    cards.forEach(card => {
+        if (card.dataset.status !== "deleted") total++;
+        if (card.dataset.status === "interview") interview++;
+        if (card.dataset.status === "rejected") rejected++;
+    });
+
+    document.getElementById("total").innerText = total;
+    document.getElementById("interviewcount").innerText = interview;
+    document.getElementById("rejectedcount").innerText = rejected;
+
+
+    const jobCountEl = document.querySelector(".abilable-jobs > div:nth-child(2)");
+    if (currentTab === "all") jobCountEl.innerText = total + " jobs";
+    else if (currentTab === "interview") jobCountEl.innerText = interview + " jobs";
+    else if (currentTab === "rejected") jobCountEl.innerText = rejected + " jobs";
+}
+
+
+
+
+function checkEmptyTabs() {
+    const interviewSection = document.getElementById("interview-section");
+    const rejectedSection = document.getElementById("rejected-section");
+    const allCards = document.querySelectorAll(".job-card");
+
+    const interviewCards = Array.from(allCards).filter(c => c.dataset.status === "interview");
+    const rejectedCards = Array.from(allCards).filter(c => c.dataset.status === "rejected");
+
+
+    if (currentTab === "interview" && interviewCards.length === 0) {
+        document.getElementById("blankpage").classList.remove("hidden");
+    } else if (currentTab === "rejected" && rejectedCards.length === 0) {
+        document.getElementById("blankpage").classList.remove("hidden");
+    } else {
+        document.getElementById("blankpage").classList.add("hidden");
+    }
+}
+
+
 
 switchTab(currentTab);
 updateCounts();
