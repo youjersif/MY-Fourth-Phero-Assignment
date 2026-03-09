@@ -69,7 +69,7 @@
         <!-- cardsSection -->
         <div id="all-cards" class="space-y-4">
             <!-- Card1 -->
-            <div class="job-card space-y-6 p-3 border border-blue-100 rounded-md">
+            <div class="job-card space-y-6 p-3 border border-blue-100 rounded-md" data-status="all">
                 <div class="flex justify-between ">
                     <div class="space-y-2">
                         <h4 class="font-bold text-[#002C5C]">Mobile First Corp</h4>
@@ -91,13 +91,14 @@
                         Work on products used by millions of
                         users worldwide.</p>
                 </div>
-                <div onclick="moveToInterview(this)" id="interview-container" class="space-x-3"><button
+                <div  onclick="moveToInterview(this)" id="interview-container" class="space-x-3"><button
                         class="btn text-green-500 border-green-500">INTERVIEW</button>
-                    <button onclick="moveToRejected(this)" id="rejected-container" class="btn text-red-600 border-red-500">REJECTED</button>
+                    <button onclick="moveToRejected(this)" id="rejected-container"
+                        class="btn text-red-600 border-red-500">REJECTED</button>
                 </div>
             </div>
             <!-- Card2 -->
-            <div class="job-card space-y-6 p-3 border border-blue-100 rounded-md">
+            <div class="job-card space-y-6 p-3 border border-blue-100 rounded-md" data-status="all">
                 <div class="flex justify-between ">
                     <div class="space-y-2">
                         <h4 class="font-bold text-[#002C5C]">WebFlow Agency</h4>
@@ -119,178 +120,182 @@
                         have portfolio and experience with
                         modern web design trends.</p>
                 </div>
-                <div onclick="moveToRejected(this)" class="space-x-3"><button class="btn text-green-500 border-green-500">INTERVIEW</button>
-                    <button onclick="moveToRejected(this)" class="btn text-red-600 border-red-500">REJECTED</button>
-                </div>
+                <div class="space-x-3"><button  onclick="moveToInterview(this)" class="btn text-green-500 border-green-500">INTERVIEW</button>
+                <button onclick="moveToRejected(this)"  class="btn text-red-600 border-red-500">REJECTED</button>
             </div>
-            <!-- Card3 -->
-            <div class="job-card space-y-6 p-3 border border-blue-100 rounded-md">
-                <div class="flex justify-between ">
-                    <div class="space-y-2">
-                        <h4 class="font-bold text-[#002C5C]">DataViz Solutions</h4>
-                        <p class="text-[#64748B]">Data Visualization Specialist</p>
-                    </div>
-                    <div class="w-8 h-8 border border-[#F1F2F4] rounded-full flex items-center justify-center"><i
-                            class="fa-solid fa-trash-can"></i></div>
+        </div>
+        <!-- Card3 -->
+        <div class="job-card space-y-6 p-3 border border-blue-100 rounded-md" data-status="all">
+            <div class="flex justify-between ">
+                <div class="space-y-2">
+                    <h4 class="font-bold text-[#002C5C]">DataViz Solutions</h4>
+                    <p class="text-[#64748B]">Data Visualization Specialist</p>
                 </div>
-                <div>
-                    <p class="text-[12px]  text-[#64748B]">Boston, MA
-                        •
-                        Full-time
-                        •
-                        $125,000 - $165,000</p>
-                </div>
-                <div class="btn bg-[#EEF4FF]"><button>NOT APPLIED</button></div>
-                <div>
-                    <p class="text-[#64748B] text-[13px]">Transform complex data into compelling visualizations.
-                        Required skills: D3.js, React, and strong
-                        analytical thinking.
-                    </p>
-                </div>
-                <div onclick="moveToInterview(this)" class="space-x-3"><button class="btn text-green-500 border-green-500">INTERVIEW</button>
-                    <button onclick="moveToRejected(this)" class="btn text-red-600 border-red-500">REJECTED</button>
-                </div>
+                <div class="w-8 h-8 border border-[#F1F2F4] rounded-full flex items-center justify-center"><i
+                        class="fa-solid fa-trash-can"></i></div>
             </div>
-            <!-- Card4 -->
-            <div class="job-card space-y-6 p-3 border border-blue-100 rounded-md">
-                <div class="flex justify-between ">
-                    <div class="space-y-2">
-                        <h4 class="font-bold text-[#002C5C]">CloudFirst Inc</h4>
-                        <p class="text-[#64748B]">Backend Developer</p>
-                    </div>
-                    <div class="w-8 h-8 border border-[#F1F2F4] rounded-full flex items-center justify-center"><i
-                            class="fa-solid fa-trash-can"></i></div>
-                </div>
-                <div>
-                    <p class="text-[12px]  text-[#64748B]">Seattle, WA
-                        •
-                        Full-time
-                        •
-                        $140,000 - $190,000Seattle, WA
-                        •
-                        Full-time
-                        •
-                        $140,000 - $190,000</p>
-                </div>
-                <div class="btn bg-[#EEF4FF]"><button>NOT APPLIED</button></div>
-                <div>
-                    <p class="text-[#64748B] text-[13px]">Design and maintain scalable backend systems using Python and
-                        AWS. Work with modern DevOps
-                        practices and cloud infrastructure.</p>
-                </div>
-                <div  onclick="moveToInterview(this)" class="space-x-3"><button class="btn text-green-500 border-green-500">INTERVIEW</button>
-                    <button  onclick="moveToRejected(this)" class="btn text-red-600 border-red-500">REJECTED</button>
-                </div>
+            <div>
+                <p class="text-[12px]  text-[#64748B]">Boston, MA
+                    •
+                    Full-time
+                    •
+                    $125,000 - $165,000</p>
             </div>
-            <!-- Card5 -->
-            <div class="job-card space-y-6 p-3 border border-blue-100 rounded-md">
-                <div class="flex justify-between ">
-                    <div class="space-y-2">
-                        <h4 class="font-bold text-[#002C5C]">Innovation Labs</h4>
-                        <p class="text-[#64748B]">UI/UX Engineer</p>
-                    </div>
-                    <div class="w-8 h-8 border border-[#F1F2F4] rounded-full flex items-center justify-center"><i
-                            class="fa-solid fa-trash-can"></i></div>
-                </div>
-                <div>
-                    <p class="text-[12px]  text-[#64748B]">Austin, TX
-                        •
-                        Full-time
-                        •
-                        $110,000 - $150,000</p>
-                </div>
-                <div class="btn bg-[#EEF4FF]"><button>NOT APPLIED</button></div>
-                <div>
-                    <p class="text-[#64748B] text-[13px]">Create beautiful and functional user interfaces for our suite
-                        of products. Strong design skills
-                        and frontend development expertise required.</p>
-                </div>
-                <div onclick="moveToInterview(this)" class="space-x-3"><button class="btn text-green-500 border-green-500">INTERVIEW</button>
-                    <button onclick="moveToRejected(this)" class="btn text-red-600 border-red-500">REJECTED</button>
-                </div>
+            <div class="btn bg-[#EEF4FF]"><button>NOT APPLIED</button></div>
+            <div>
+                <p class="text-[#64748B] text-[13px]">Transform complex data into compelling visualizations.
+                    Required skills: D3.js, React, and strong
+                    analytical thinking.
+                </p>
             </div>
-            <!-- Card6 -->
-            <div class="job-card space-y-6 p-3 border border-blue-100 rounded-md">
-                <div class="flex justify-between ">
-                    <div class="space-y-2">
-                        <h4 class="font-bold text-[#002C5C]">MegaCorp Solutions</h4>
-                        <p class="text-[#64748B]">JavaScript Developer</p>
-                    </div>
-                    <div class="w-8 h-8 border border-[#F1F2F4] rounded-full flex items-center justify-center"><i
-                            class="fa-solid fa-trash-can"></i></div>
-                </div>
-                <div>
-                    <p class="text-[12px]  text-[#64748B]">New York, NY
-                        •
-                        Full-time
-                        •
-                        $130,000 - $170,00</p>
-                </div>
-                <div class="btn bg-[#EEF4FF]"><button>NOT APPLIED</button></div>
-                <div>
-                    <p class="text-[#64748B] text-[13px]">Build enterprise applications with JavaScript and modern
-                        frameworks. We offer competitive
-                        compensation, health insurance, and professional development opportunities.</p>
-                </div>
-                <div onclick="moveToInterview(this)" class="space-x-3"><button class="btn text-green-500 border-green-500">INTERVIEW</button>
-                    <button onclick="moveToRejected(this)" class="btn text-red-600 border-red-500">REJECTED</button>
-                </div>
+            <div class="space-x-3"><button onclick="moveToInterview(this)" class="btn text-green-500 border-green-500">INTERVIEW</button>
+                <button onclick="moveToRejected(this)"  class="btn text-red-600 border-red-500">REJECTED</button>
             </div>
-            <!-- Card7 -->
-            <div class="job-card space-y-6 p-3 border border-blue-100 rounded-md">
-                <div class="flex justify-between ">
-                    <div class="space-y-2">
-                        <h4 class="font-bold text-[#002C5C]">MStartupXYZ</h4>
-                        <p class="text-[#64748B]">Full Stack Engineer</p>
-                    </div>
-                    <div class="w-8 h-8 border border-[#F1F2F4] rounded-full flex items-center justify-center"><i
-                            class="fa-solid fa-trash-can"></i></div>
+        </div>
+        <!-- Card4 -->
+        <div class="job-card space-y-6 p-3 border border-blue-100 rounded-md" data-status="all">
+            <div class="flex justify-between ">
+                <div class="space-y-2">
+                    <h4 class="font-bold text-[#002C5C]">CloudFirst Inc</h4>
+                    <p class="text-[#64748B]">Backend Developer</p>
                 </div>
-                <div>
-                    <p class="text-[12px]  text-[#64748B]">Remote
-                        •
-                        Full-time
-                        •
-                        $120,000 - $160,000</p>
-                </div>
-                <div class="btn bg-[#EEF4FF]"><button>NOT APPLIED</button></div>
-                <div>
-                    <p class="text-[#64748B] text-[13px]">Join our fast-growing startup and work on our core platform.
-                        Experience with Node.js and React
-                        required. Great benefits and equity package included.</p>
-                </div>
-                <div onclick="moveToInterview(this)" class="space-x-3"><button class="btn text-green-500 border-green-500">INTERVIEW</button>
-                    <button onclick="moveToRejected(this)" class="btn text-red-600 border-red-500">REJECTED</button>
-                </div>
+                <div class="w-8 h-8 border border-[#F1F2F4] rounded-full flex items-center justify-center"><i
+                        class="fa-solid fa-trash-can"></i></div>
             </div>
-            <!-- Card8 -->
-            <div class="job-card space-y-6 p-3 border border-blue-100 rounded-md">
-                <div class="flex justify-between ">
-                    <div class="space-y-2">
-                        <h4 class="font-bold text-[#002C5C]">TechCorp Industries</h4>
-                        <p class="text-[#64748B]">Senior Frontend Developer</p>
-                    </div>
-                    <div class="w-8 h-8 border border-[#F1F2F4] rounded-full flex items-center justify-center"><i
-                            class="fa-solid fa-trash-can"></i></div>
+            <div>
+                <p class="text-[12px]  text-[#64748B]">Seattle, WA
+                    •
+                    Full-time
+                    •
+                    $140,000 - $190,000Seattle, WA
+                    •
+                    Full-time
+                    •
+                    $140,000 - $190,000</p>
+            </div>
+            <div class="btn bg-[#EEF4FF]"><button>NOT APPLIED</button></div>
+            <div>
+                <p class="text-[#64748B] text-[13px]">Design and maintain scalable backend systems using Python and
+                    AWS. Work with modern DevOps
+                    practices and cloud infrastructure.</p>
+            </div>
+            <div onclick="moveToInterview(this)" class="space-x-3"><button
+                    class="btn text-green-500 border-green-500">INTERVIEW</button>
+                <button onclick="moveToRejected(this)" class="btn text-red-600 border-red-500">REJECTED</button>
+            </div>
+        </div>
+        <!-- Card5 -->
+        <div class="job-card space-y-6 p-3 border border-blue-100 rounded-md" data-status="all">
+            <div class="flex justify-between ">
+                <div class="space-y-2">
+                    <h4 class="font-bold text-[#002C5C]">Innovation Labs</h4>
+                    <p class="text-[#64748B]">UI/UX Engineer</p>
                 </div>
-                <div>
-                    <p class="text-[12px]  text-[#64748B]">San Francisco, CA
-                        •
-                        Full-time
-                        •
+                <div class="w-8 h-8 border border-[#F1F2F4] rounded-full flex items-center justify-center"><i
+                        class="fa-solid fa-trash-can"></i></div>
+            </div>
+            <div>
+                <p class="text-[12px]  text-[#64748B]">Austin, TX
+                    •
+                    Full-time
+                    •
+                    $110,000 - $150,000</p>
+            </div>
+            <div class="btn bg-[#EEF4FF]"><button>NOT APPLIED</button></div>
+            <div>
+                <p class="text-[#64748B] text-[13px]">Create beautiful and functional user interfaces for our suite
+                    of products. Strong design skills
+                    and frontend development expertise required.</p>
+            </div>
+            <div onclick="moveToInterview(this)" class="space-x-3"><button
+                    class="btn text-green-500 border-green-500">INTERVIEW</button>
+                <button onclick="moveToRejected(this)" class="btn text-red-600 border-red-500">REJECTED</button>
+            </div>
+        </div>
+        <!-- Card6 -->
+        <div class="job-card space-y-6 p-3 border border-blue-100 rounded-md" data-status="all">
+            <div class="flex justify-between ">
+                <div class="space-y-2">
+                    <h4 class="font-bold text-[#002C5C]">MegaCorp Solutions</h4>
+                    <p class="text-[#64748B]">JavaScript Developer</p>
+                </div>
+                <div class="w-8 h-8 border border-[#F1F2F4] rounded-full flex items-center justify-center"><i
+                        class="fa-solid fa-trash-can"></i></div>
+            </div>
+            <div>
+                <p class="text-[12px]  text-[#64748B]">New York, NY
+                    •
+                    Full-time
+                    •
+                    $130,000 - $170,00</p>
+            </div>
+            <div class="btn bg-[#EEF4FF]"><button>NOT APPLIED</button></div>
+            <div>
+                <p class="text-[#64748B] text-[13px]">Build enterprise applications with JavaScript and modern
+                    frameworks. We offer competitive
+                    compensation, health insurance, and professional development opportunities.</p>
+            </div>
+            <div onclick="moveToInterview(this)" class="space-x-3"><button
+                    class="btn text-green-500 border-green-500">INTERVIEW</button>
+                <button onclick="moveToRejected(this)" class="btn text-red-600 border-red-500">REJECTED</button>
+            </div>
+        </div>
+        <!-- Card7 -->
+        <div class="job-card space-y-6 p-3 border border-blue-100 rounded-md" data-status="all">
+            <div class="flex justify-between ">
+                <div class="space-y-2">
+                    <h4 class="font-bold text-[#002C5C]">MStartupXYZ</h4>
+                    <p class="text-[#64748B]">Full Stack Engineer</p>
+                </div>
+                <div class="w-8 h-8 border border-[#F1F2F4] rounded-full flex items-center justify-center"><i
+                        class="fa-solid fa-trash-can"></i></div>
+            </div>
+            <div>
+                <p class="text-[12px]  text-[#64748B]">Remote
+                    •
+                    Full-time
+                    •
+                    $120,000 - $160,000</p>
+            </div>
+            <div class="btn bg-[#EEF4FF]"><button>NOT APPLIED</button></div>
+            <div>
+                <p class="text-[#64748B] text-[13px]">Join our fast-growing startup and work on our core platform.
+                    Experience with Node.js and React
+                    required. Great benefits and equity package included.</p>
+            </div>
+            <div onclick="moveToInterview(this)" class="space-x-3"><button
+                    class="btn text-green-500 border-green-500">INTERVIEW</button>
+                <button onclick="moveToRejected(this)" class="btn text-red-600 border-red-500">REJECTED</button>
+            </div>
+        </div>
+        <!-- Card8 -->
+        <div class="job-card space-y-6 p-3 border border-blue-100 rounded-md" data-status="all">
+            <div class="flex justify-between ">
+                <div class="space-y-2">
+                    <h4 class="font-bold text-[#002C5C]">TechCorp Industries</h4>
+                    <p class="text-[#64748B]">Senior Frontend Developer</p>
+                </div>
+                <div class="w-8 h-8 border border-[#F1F2F4] rounded-full flex items-center justify-center"><i
+                        class="fa-solid fa-trash-can"></i></div>
+            </div>
+            <div>
+                <p class="text-[12px]  text-[#64748B]">San Francisco, CA
+                    •
+                    Full-time
+                    •
 
-                        $130,000 - $175,000</p>
-                </div>
-                <div class="btn bg-[#EEF4FF]"><button>NOT APPLIED</button></div>
-                <div>
-                    <p class="text-[#64748B] text-[13px]">We are looking for an experienced Frontend Developer to build
-                        scalable web applications using
-                        React and TypeScript. You will work with a talented team on cutting-edge projects.</p>
-                </div>
-                <div onclick="moveToInterview(this)" class="space-x-3"><button class="btn text-green-500 border-green-500">INTERVIEW</button>
-                    <button onclick="moveToRejected(this)" class="btn text-red-600 border-red-500">REJECTED</button>
-                </div>
+                    $130,000 - $175,000</p>
             </div>
+            <div class="btn bg-[#EEF4FF]"><button>NOT APPLIED</button></div>
+            <div>
+                <p class="text-[#64748B] text-[13px]">We are looking for an experienced Frontend Developer to build
+                    scalable web applications using
+                    React and TypeScript. You will work with a talented team on cutting-edge projects.</p>
+            </div>
+            <div class="space-x-3"><button onclick="moveToInterview(this)"  class="btn text-green-500 border-green-500">INTERVIEW</button>
+                <button onclick="moveToRejected(this)"  class="btn text-red-600 border-red-500">REJECTED</button>
+            </div>
+        </div>
 
 
         </div>
@@ -315,6 +320,7 @@
         </div>
 
     </section>
+
     <script src="./script.js"></script>
 </body>
 

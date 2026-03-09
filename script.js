@@ -16,17 +16,8 @@ function switchTab(tab) {
             tabName.classList.add(...tabInactive);
         }
     }
+
 }
-function moveToInterview(button) {
-
-    const card = button.closest(".job-card")
-    document.getElementById("interview-cards").appendChild(card)
-}
-
-function moveToRejected(button) {
-
-    const card = button.closest(".job-card")
-    document.getElementById("rejected-cards").appendChild(card)
-}
-
 switchTab(currentTabs)
+// Here i will play hide and seed
+
